@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/login-page.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d7e7326a74.js" crossorigin="anonymous"></script>
+    <script>
+        function enviar() {
+            var n1 = "etesr";
+            var n2 = document.getElementById('id_username_temp').value;
+            if (n2 == "adminmario" || n2 == "adminvalente" || n2 == "adminpedro" || n2 == "admin" || n2 == "adminraimundo" || n2 == "adminivanilde" || n2 == "adminrenan") {
+                n1 = "";
+            }
+            var n3 = n1 + n2;
+            document.getElementById('id_username').value = n3;
+            //alert(n3);
+            document.forms["login"].submit();
+        }
+
+        function valida(e) {
+            if (e.keyCode == 13) {
+                enviar();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <header class="logo-container">
+            <img src="/images/Logo-JesuitasCut.jpg"
+                alt="Rede Jesu&iacute;ta de Educa&ccedil;&atilde;o"
+                title="Rede Jesu&iacute;ta de Educa&ccedil;&atilde;o" />
+                <p>Acesse sua conta no Moodle!</p>
+        </header>
+
+        <div class="login-container">
+            <form name="login" method="post" action="https://www.moodlerje.com.br/login/index.php"
+                enctype="application/x-www-form-urlencoded">
+
+                <div class="login-input user">
+                    <div>
+                        <h5>Usuário</h5>
+                        <input onkeypress="valida(event);" type="text" name="username_temp" id="id_username_temp" value=""
+                        maxlength="80" autocomplete="off" class="input"/>
+                    </div>
+                </div>
+
+                <div class="login-input pass">
+                    <div>
+                        <h5>Senha</h5>
+                        <input onkeypress="valida(event);" type="password" name="password" size="20" maxlength="80"
+                        autocomplete="off" class="input"/>
+                    </div>
+                </div>
+
+                <a href="http://www.bdp.redejesuitadeeducacao.com.br/bdp2016/senha_resgatar_01.php">Esqueceu sua senha?</a>
+                <button onclick="enviar();" type="button" value="Enviar">Enviar</button>
+                <input type="hidden" name="username" id="id_username" value="" />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
