@@ -1,0 +1,138 @@
+#container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 6.7rem 2.3rem 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.7rem;
+    padding: 1.5rem;
+}
+
+form, 
+button,
+img,
+input {
+    width: 100%;
+}
+
+.logo-container p {
+    font: 500 3rem Poppins;
+    margin: 3.9rem 0 1.9rem;
+}
+
+.login-input {
+    position: relative;
+    margin: 3.9rem 0;
+    border-bottom: .2rem solid #aaa;
+    transition: border .4s;
+}
+
+.login-input:focus-within {
+    border-bottom: .2rem solid #363636 ;
+}
+
+.login-input.user {
+    margin-top: 0;
+}
+
+.login-input.pass {
+    margin-bottom: .7rem;
+}
+
+.login-input > div h5  {
+    position: absolute;
+    top: -3rem;
+    left: 5rem;
+    transform: translate(-50%);
+    color: #aaa;
+    font-size: 2.4rem;
+    transition: .3s;
+}
+
+.login-input.pass > div h5 {
+    left: 4.1rem;
+}
+
+.input {
+    height: 6rem;
+    font-weight: 100;
+    border: 0;
+    background: 0;
+    outline: 0;
+    font-size: 3.2rem;
+}
+
+a,
+button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7.2rem;
+}
+
+a {
+    color: #4169E1;
+    font: 400 2.8rem Archivo;
+    transition: color .4s;
+}
+
+a:hover {
+    color: #00008B;
+}
+
+button {
+    height: 8.2rem;
+    background: #8B0000;
+    color: #fff;
+    font: 700 2.4rem Archivo;
+    border-radius: 1.8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 0;
+    transition: background .4s;
+}
+
+button:hover {
+    background: #5a0101;
+}
+
+@media (max-width: 699px){
+    :root {
+        font-size: 40%;
+    }
+}
+
+@media(min-width: 1100px) {
+    :root {
+        font-size: 30%;
+    }
+    .logo-container img {
+        width: 450px;
+    }
+
+    form{
+        width: 400px;
+    }
+
+    .login-container {
+        margin: 30px 0 0;
+        padding: 10px;
+    }
+
+    .login-container p {
+        margin: 25px 0 12px;
+    }
+}
